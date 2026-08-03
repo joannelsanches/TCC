@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Alpinia Palace</title>
+
+    <style>
+        /*Paleta */
+        :root {
+            --marrom-escuro: #3B2C26;
+            --caramelo: #A05A2C;
+            --laranja-folha: #C97C48;
+            --dourado: #EAC98D;
+            --bege: #FAF4EF;
+            --verde-oliva: #8A8D5A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: var(--bege);
+            color: var(--marrom-escuro);
+            font-family: 'Georgia', serif;
+        }
+
+        /* Hero */
+        .hero {
+            background: url('/img/img.png') no-repeat center/cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            color: var(--dourado);
+            font-size: 72px;
+            text-shadow: 2px 2px var(--marrom-escuro);
+        }
+
+        .hero p {
+            color: var(--bege);
+            font-size: 22px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Sobre */
+        .sobre {
+            background-color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            color: var(--caramelo);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sobre p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .sobre2 {
+            background-color: white;
+            padding: 20px 5px;
+            text-align: center;
+        }
+
+        .sobre2 button {
+            background-color: var(--laranja-folha);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .sobre2 button:hover {
+            background-color: var(--caramelo);
+            transform: scale(1.05);
+        }
+
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            background-color: rgb(235, 202, 165);
+        }
+
+        .card {
+            background-color: white;
+            width: 480px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px;
+            color: var(--marrom-escuro);
+        }
+
+        .card p {
+            margin: 0 15px 20px;
+            color: var(--marrom-escuro);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: rgb(87, 38, 18);
+            color: var(--dourado);
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 35px;
+        }
+
+        .btn {
+            background-color: #fff6e9;
+            color: #000000;
+        }
+
+        .nav-btn {
+            background-color: #fff6e9;
+            color: #000000;
+            padding: 10px 22px;
+            border-radius: 20px;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 3px 6px rgba(90, 40, 10, 0.24);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .nav-btn:hover {
+            background-color: #c47a39;
+            box-shadow: 0 4px 10px rgba(90, 40, 10, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 4px rgba(90, 40, 10, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="nav-btn" onclick="window.location.href='/adm'">=</button>
+
+    <section class="hero">
+        <h1>fjhadsjfhjashnf</h1>
+    </section>
+
+
+    <section class="sobre">
+        <h2>Bem-vindo à Temporada de Outono no Alphínia Palace</h2>
+        <p> Nessa temporada, o outono ganha vida em cada detalhe: o aroma da madeira aquecida,
+            o dourado das folhas que dançam ao vento e a tranquilidade que só a natureza pode oferecer.
+            Nosso hotel foi pensado para ser um espaço de descanso, encanto e reconexão.
+            Entre trilhas, paisagens que mudam de cor a cada amanhecer e ambientes aconchegantes,
+            convidamos você a desacelerar e aproveitar o que há de mais bonito nesta estação.
+        </p>
+    </section>
+
+
+    <section class="sobre2"><a href="/reserva"><button></i>Comece sua reserva</button></a></section>
+
+    <section class="cards">
+        <a href="/lista" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1711669323480-ee46e74ea23d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Hotel">
+                <h3>Lista de Quartos e serviços</h3>
+                <p>Conheça nossas acomodações.</p>
+            </div>
+        </a>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1672406738896-3cb1f9b2c135?q=80&w=826&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Agenda">
+            <h3>Agenda</h3>
+            <p>Descubra os as oportunidades dessa temporada.</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2025 Hotel Alphínia Palace | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+</html>

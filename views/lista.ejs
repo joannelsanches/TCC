@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Quartos e Serviços</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #fff7e8; /* tom creme outonal */
+            margin: 0;
+            padding: 0;
+            color: #5a3b29;
+        }
+
+        .topo {
+            background-color: #8b4a19; /* marrom queimado */
+            color: #fceedd;
+            padding: 25px;
+            text-align: center;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        h1 {
+            margin-top: 40px;
+            color: #8b4a19;
+            font-size: 32px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 280px;
+            background-color: #fffaf3;
+            border-radius: 12px;
+            box-shadow: 0px 2px 8px rgba(139, 74, 25, 0.25);
+            padding: 20px;
+            border: 1px solid rgba(139, 74, 25, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #ecc79b;
+        }
+
+        hr {
+            margin: 50px 0;
+            border: none;
+            border-top: 2px dashed #c28e55;
+        }
+
+        ul li {
+            font-size: 19px;
+            margin-bottom: 10px;
+            background-color: #f9e2c7;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border-left: 6px solid #c47a35;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px;
+            margin-top: 70px;
+            background-color: #8b4a19;
+            color: #fceedd;
+            font-weight: 600;
+        }
+
+            .nav-btn {
+                background-color: #a05d2d;
+                color: #fff9f2;
+                padding: 10px 22px;
+                border-radius: 20px;
+                font-size: 17px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+                transition: 0.25s;
+                box-shadow: 0 3px 6px rgba(90, 40, 10, 0.24);
+                position: absolute;
+                top: 20px;
+                left: 20px;
+}
+
+.nav-btn:hover {
+    background-color: #c47a39;
+    box-shadow: 0 4px 10px rgba(90, 40, 10, 0.35);
+    transform: translateY(-2px);
+}
+
+.nav-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 4px rgba(90, 40, 10, 0.2);
+}
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+<button class="nav-btn" onclick="window.location.href='/'">=</button>
+        <h2>Quartos e Serviços</h2>
+    </div>
+
+    <div class="container">
+
+        <h1>Quartos</h1>
+
+        <div class="cards">
+            <% quartos.forEach(q => { %>
+                <div class="card">
+                    <% if(q.tipquarto.img) { %>
+                        <img src="<%= q.tipquarto.img %>" alt="Imagem do quarto">
+                    <% } %>
+
+                    <h2><%= q.tipquarto.nome %></h2>
+
+                    <p><strong>Descrição:</strong> <%= q.tipquarto.descricao %></p>
+                    <p><strong>Número:</strong> <%= q.numero %></p>
+                    <p><strong>Andar:</strong> <%= q.andar %></p>
+                    <p><strong>Capacidade:</strong> <%= q.capacidade %> hóspedes</p>
+                    <p><strong>Diária:</strong> R$ <%= q.diaria.toFixed(2) %></p>
+                </div>
+            <% }) %>
+        </div>
+
+        <hr>
+
+        <h1>Serviços oferecidos</h1>
+
+        <ul>
+            <% servicos.forEach(s => { %>
+                <li>
+                    <strong><%= s.descricao %></strong> — R$ <%= s.valor.toFixed(2) %>
+                </li>
+            <% }) %>
+        </ul>
+
+    </div>
+
+    <footer>
+         <p>© 2025 Hotel Alphínia Palace | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
