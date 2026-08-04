@@ -1,14 +1,25 @@
 import conexao from '../config/conexao.js'
 
 const Candidatura = conexao.Schema({
-    descricao: {
+    status: {
         type: String,
+        enum: ['em análise', 'aprovado', 'rejeitado'],
         required: true,
     },
-    valor: {
-        type: Number,
+    data: {
+        type: Date,
         required: true,
-    }
+    },
+    aluno: {
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Aluno',
+        required: true,
+    },
+    vaga: {
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Vaga',
+        required: true,
+    },
 });
 
-export default conexao.model('Servico',Servico)
+export default conexao.model('Candidatura', Candidatura)

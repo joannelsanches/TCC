@@ -1,27 +1,29 @@
 import conexao from '../config/conexao.js'
 
 const Vaga = conexao.Schema({
-    diaria: {
-        type: Number,
-        required: true,
-    },
-    numero: {
+    titulo: {
         type: String,
-        required: true,
+        required: true
     },
-    capacidade: {
+    descricao: {
+        type: String,
+        required: true
+    },
+    requisitos: {
+        type: String,
+        required: true
+    },
+    salario: {
         type: Number,
-        required: true,
+        required: true
     },
-    andar: {
-        type: Number,
-        required: true,
+    empresa: {
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Empresa',
+        required: true
     },
-    tipquarto: {
-        type: conexao.Types.ObjectId,
-        ref: "Tipquarto",
-        required: true,
-    }
+
+    
 });
 
-export default conexao.model('Quarto',Quarto)
+export default conexao.model('Vaga', Vaga)

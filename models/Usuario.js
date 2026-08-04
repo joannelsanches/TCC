@@ -1,7 +1,7 @@
 import conexao from '../config/conexao.js'
 
 const Usuario = conexao.Schema({
-        nome: {
+    nome: {
         type: String,
         required: true,
     },
@@ -15,9 +15,9 @@ const Usuario = conexao.Schema({
     },
     tipo: {
         type: String,
-    enum: ["aluno", "empresa", "admin"],
-    required: true,
+        enum: ['aluno', 'empresa', 'admin'],
+        required: true,
     }
 });
 
-export default conexao.model('Aluno',Aluno)
+export default conexao.model('Usuario', Usuario)

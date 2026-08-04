@@ -1,13 +1,13 @@
 import express from 'express';
 const router = express.Router();
-import TipquartoController from '../controllers/AuthController.js'
-const controle = new TipquartoController();
+import AuthController from '../controllers/AuthController.js'
+const controle = new AuthController();
 import multer from 'multer';
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-const caminhobase = 'tipquarto/'
+const caminhobase = 'auth/'
 
 router.get('/' + caminhobase + 'add', controle.openAdd)
 router.post('/' + caminhobase + 'add', upload.single('img'), controle.add)

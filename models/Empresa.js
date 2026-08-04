@@ -2,7 +2,7 @@ import conexao from '../config/conexao.js'
 
 const Empresa = conexao.Schema({
     usuario: {
-        type:conexao.Types.ObjectId, 
+        type: conexao.Schema.Types.ObjectId, 
         ref: 'Usuario',
         required:true
     },
@@ -23,9 +23,13 @@ const Empresa = conexao.Schema({
         required: true
     },
     logo:{
-        type: Image,
+        type: String,
         required: true
-    }
+    },
+    descricao: {
+        type: String,   
+        required: true
+    }   
 
 });
 
