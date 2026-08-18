@@ -8,7 +8,7 @@ const PerfilAcademico = new conexao.Schema({
     },
     curso: {
         type: String,
-        enum: ["Técnico em Informatica", "Técnico em Agropecuária", "Técnico em Meio Ambiente"],
+        enum: ["Técnico em Informatica", "Técnico em Agropecuária", "Técnico em Meio Ambiente"], //mudar cursos
         required: true
     },
     semestre: {
